@@ -11,9 +11,7 @@ function mindGame(num){
     }
 }
 
-/*  I do for this problem. First of all Multiply the input number by 3, add 10 to the result, subtract 2 from the result, subtract 5 from the result, and return the final result of this operation. */
-
-
+/*Description: I do for this problem. First of all Multiply the input number by 3, add 10 to the result, subtract 2 from the result, subtract 5 from the result, and return the final result of this operation. */
 
 
 
@@ -34,7 +32,7 @@ function evenOdd(str){
 
 }
 
-// The function takes a string input and returns the string "even" if the length of the input string is even and "odd" if the length is odd. Additionally, the function also checks if the input is not a string and returns a message asking for a valid input if that's the case.
+//Description: The function takes a string input and returns the string "even" if the length of the input string is even and "odd" if the length is odd. Additionally, the function also checks if the input is not a string and returns a message asking for a valid input if that's the case.
 
 
 
@@ -55,7 +53,7 @@ function isLGSeven (num) {
     }
 }
 
-// The function takes a number as input and calculates the difference between the input and 7. If the difference is less than 7, it returns the difference, otherwise, it returns double the input.
+//Description: The function takes a number as input and calculates the difference between the input and 7. If the difference is less than 7, it returns the difference, otherwise, it returns double the input.
 
 
 
@@ -65,13 +63,20 @@ function isLGSeven (num) {
 function findingBadData (arrNum) {
     let badData = 0;
     const remaining = arrNum.length;
+
+    if (!Array.isArray(arrNum)){
+        return "Please provide an array as input";
+    }
+    else if(arrNum[2] === undefined){
+        return "Array does not have the 3 number";
+    }
     
     for (let i = 0; i < remaining; i++) {
         const index = i;
         const element = arrNum[index];
 
         if (typeof arrNum[i] != 'number'){
-            return "please enter the valid number";
+            return "please enter the valid array and number"
         }
         else if (element < 0){
             badData++;
@@ -81,7 +86,7 @@ function findingBadData (arrNum) {
     return badData;
 }
 
-// The function findingBadData takes an array of numbers as an argument and returns the count of negative numbers in the array. The function uses a loop to iterate over each element in the array, checks if the element is less than 0, and increments the badData count if it is.
+//Description: The function findingBadData takes an array of numbers as an argument and returns the count of negative numbers in the array. The function uses a loop to iterate over each element in the array, checks if the element is less than 0, and increments the badData count if it is.
 
 
 
@@ -107,7 +112,7 @@ function gemsToDiamond (gem1, gem2, gem3){
     }
 }
 
-// This function takes three inputs (gem1, gem2, and gem3), representing the number of gems each of three friends has. It then calculates the number of diamonds each friend can get based on the conversion rate of each friend. It sums up the total number of diamonds they can get and returns the result.
+//Description: This function takes three inputs (gem1, gem2, and gem3), representing the number of gems each of three friends has. It then calculates the number of diamonds each friend can get based on the conversion rate of each friend. It sums up the total number of diamonds they can get and returns the result.
 
 
 
