@@ -44,13 +44,19 @@ function evenOdd(str){
 
 function isLGSeven (num) {
     const difference = num - 7;
-    if (difference < 7 ){
+    if (typeof num != 'number'){
+        return "please enter a valid number"
+    }
+    else if (difference < 7 ){
         return difference;
     }
     else{
         return num * 2;
     }
 }
+
+const result = 15;
+console.log(isLGSeven(result));
 
 // The function takes a number as input and calculates the difference between the input and 7. If the difference is less than 7, it returns the difference, otherwise, it returns double the input.
 
@@ -66,17 +72,17 @@ function findingBadData (arrNum) {
     for (let i = 0; i < remaining; i++) {
         const index = i;
         const element = arrNum[index];
+
         if (typeof arrNum[i] != 'number'){
             return "please enter the valid number";
         }
         else if (element < 0){
             badData++;
         }
+
     }
     return badData;
 }
-const result = ['humaion', 'kobir'];
-console.log(findingBadData(result));
 
 // The function findingBadData takes an array of numbers as an argument and returns the count of negative numbers in the array. The function uses a loop to iterate over each element in the array, checks if the element is less than 0, and increments the badData count if it is.
 
