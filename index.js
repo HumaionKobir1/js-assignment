@@ -37,3 +37,22 @@ function evenOdd(str){
 // The function takes a string input and returns the string "even" if the length of the input string is even and "odd" if the length is odd. Additionally, the function also checks if the input is not a string and returns a message asking for a valid input if that's the case.
 
 
+
+
+
+// Problem-3
+
+function isLGSeven (num) {
+    const difference = num - 7;
+    if (difference < 7 ){
+        return difference;
+    }
+    else{
+        return num * 2;
+    }
+}
+
+console.log(isLGSeven(15));
+
+// The function takes a number as input and calculates the difference between the input and 7. If the difference is less than 7, it returns the difference, otherwise, it returns double the input.
+
